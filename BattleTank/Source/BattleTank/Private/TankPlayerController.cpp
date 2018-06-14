@@ -50,6 +50,12 @@ void ATankPlayerController::AimTowardsCrosshair()
 //get world location through the crosshair
 bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) const
 {
-	OutHitLocation = FVector(1.0);
+	// Find the crosshair position
+	int32 ViewPortSizeX, ViewPortSizeY;
+	GetViewportSize(ViewPortSizeX, ViewPortSizeY);
+	auto ScreenLocation = FVector2D(ViewPortSizeX*CrosshairXLocation, ViewPortSizeY*CrosshairYLocation);
+
+	// *De project the screen position of the crosshair to a world position
+	// Line trace along that look direction, and see what we hit
 	return true;
 }

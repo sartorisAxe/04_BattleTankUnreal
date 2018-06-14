@@ -27,4 +27,9 @@ public:
 
 	//Return an OUT parameter. True if hit landscape
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
+
+private:
+	UPROPERTY(EditAnywhere)
+	float CrosshairXLocation = .5f;
+	float CrosshairYLocation = .3333f;
 };
