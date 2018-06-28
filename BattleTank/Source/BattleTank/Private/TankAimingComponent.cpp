@@ -53,6 +53,6 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	auto DeltaTotator = AimAsRotator - BarrelRotator;
 
 
-	Barrel->Elevate(5); //TODO remove magic number
+	Barrel->Elevate(DeltaTotator.Pitch); //TODO remove magic number
 
 }
