@@ -19,7 +19,7 @@ public:
 	
 private:
 	UPROPERTY(EditAnywhere, Category = Setup)
-	float MaxDegreesPerSecond = 20; 
+	float MaxDegreesPerSecond = 25; 
 
 	UPROPERTY(EditAnywhere, Category = Setup)
 	float MaxElevationDegree = 40;
