@@ -7,7 +7,6 @@
 
 //Forward declaration
 class UTankBarrel;
-class UTankTurret;
 class UTankAimingComponent;
 
 
@@ -40,7 +39,7 @@ private:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
 	UPROPERTY(EditAnywhere, Category = Firing)
-	float LaunchSpeed = 100000; //1000 m/s. UE gives in cm
+	float LaunchSpeed = 100000; //TODO find sensible default 1000 m/s. UE gives in cm
 
 
 	
